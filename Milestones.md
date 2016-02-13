@@ -1,0 +1,21 @@
+#Planning
+
+- **Milestone 1**: 14/02 
+	- Github repo afhebben
+- **Milestone 2**: 26/02 
+	- algemene layout en inhoud
+	- context & stand van zaken binnen onderzoeksdomein
+	- literatuurstudie begonnen
+- **Milestone 3**: 18/03
+	- cheat software gevonden om aan test te onderwerpen
+	- Persoon (of meerdere) hebben voor interview
+	- Onderzoek tussen verschillen anti-cheat software 50%
+- **Milestone 4**: 8/04
+	- proof of concept klaar voor een test op verschillende cheats
+	- Onderzoek tussen verschillende bestaande software 100%
+- **Milestone 5**: 29/04
+	- Vergelijken van de verschillende anti-cheats toegepast op cheats
+	- besluit schrijven
+- **Milestone 6**: 15/05
+	- Afgewerkte bachelorproef
+	- gecontroleerd op fouten
