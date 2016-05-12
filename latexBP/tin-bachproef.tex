@@ -92,7 +92,7 @@
 \newcommand{\instelling}{BeSports}
 
 % De titel van het rapport/bachelorproef
-\newcommand{\titel}{Anti-Cheating binnen Gaming \& eSports voor FPS games die in lijn ligt met een online platform}
+\newcommand{\titel}{Anti-Cheating voor FPS games binnen de eSports scene}
 
 % Datum van indienen
 \newcommand{\datum}{29 mei 2016}
@@ -181,14 +181,17 @@
 % thesis) synthese van het document. In ons geval beschrijf je kort de
 % probleemstelling en de context, de onderzoeksvragen, de aanpak en de
 % resultaten.
-Binnen de sector eSports en gaming is cheating een van de grootste opkomende problemen. De gamewereld is een groeiende sector waarbij er meer en meer geld mee valt te verdienen waardoor er ook vaker wordt valsgespeeld. De spelers kunnen een onfair voordeel halen die heel miniem kan zijn tot spelbrekend. De bedoeling is dan ook om dit tegen te gaan en een competitie die gespeeld wordt te controleren op eerlijkheid via ''anti-cheating''. 
+Binnen de sector eSports en gaming is cheating een van de grootste opkomende problemen. De gamewereld is een groeiende sector waarbij er meer en meer geld mee valt te verdienen. Er zijn toernooien voor eSports games met prijzenpotten oplopend tot 18 miljoen euro. Dit is vaak ook een van de redenen waardoor er ook vaker wordt valsgespeeld. De spelers kunnen een onfair voordeel halen dat heel miniem kan zijn tot spelbrekend aan de hand van verschillende cheats. De bedoeling is dan ook om dit tegen te gaan en een competitie die gespeeld wordt te controleren op eerlijkheid via ''anti-cheating''. 
 \\
 
 In dit onderzoek gaan we op zoek naar de populairste methodes om vals te spelen: hoe deze werken, wat de verschillen zijn en  een vergelijking van functionaliteit. 
-Daarna nemen we een kijkje naar de eenvoudigste en beste manieren om dit tegen te gaan. Deze zullen getest worden aan de hand van meerdere cheats die er op los gelaten worden.
+Daarna nemen we een kijkje naar beste manieren die relatief eenvoudig te implementeren zijn om dit tegen te gaan. Deze zullen getest worden aan de hand van meerdere cheats die er op los gelaten worden.
 \\
 
-Als laatste onderdeel zou er ook graag een interview bij horen. Dit met een persoon die actief bezig is met de development van een anti-cheat tool. Dit om nog iets diepere informatie te werking van anti-cheats want het is niet eenvoudig om hier rond informatie te vinden omdat je zo ook valsspelers inzicht heeft in de anti-cheat.
+Dit zal gedaan worden aan de hand van het zoeken van enkele veelgebruikte cheats. Deze worden dan getest op een server die verschillende methodes van anti-cheating zal implementeren.
+\\
+
+Als laatste onderdeel interviewen we iemand met diepere vakkennis rond het onderwerp. Dit om nog iets diepere informatie te werking van anti-cheats want het is niet eenvoudig om hier rond informatie te vinden omdat je zo ook valsspelers inzicht heeft in de anti-cheat.
   
 \end{abstract}
 
@@ -197,7 +200,7 @@ Als laatste onderdeel zou er ook graag een interview bij horen. Dit met een pers
 
 % TODO: Vergeet ook niet te bedanken wie je geholpen/gesteund/... heeft
 
-Ik wil BeSports bedanken voor het gebruik van de gameservers om testen op uit te voeren. 
+Ik wil BeSports bedanken voor het gebruik van de gameservers om testen op uit te voeren. Ook aan de verschillende communityleden van het platform voor het doorgeven van enkel websites met cheat software. Als laatste wil ik ook nog Stefanie Geldof bedanken om samen testen uit te voeren op de gameservers.
 
 \tableofcontents
 
@@ -212,14 +215,21 @@ Ik wil BeSports bedanken voor het gebruik van de gameservers om testen op uit te
 De bachelorproef speelt zich af binnen de eSports scene. eSports staat voor ''electronic sports'' \citep{BenDirs2015}. Dit is een overkoepelende term voor alles dat met competitief gamen te maken heeft. Het kan vrij letterlijk gezien worden als een sport maar dan achter een computerscherm. Net als gewone professionele sporters hebben eSporters een strak trainingsschema die tot wel meer dan 12u per dag tijd in neemt. Wanneer er toernooien gespeeld worden valt er voor de spelers tot wel 18 miljoen dollar aan prijzengeld te winnen. \citep{dota2theinternational} 
 \\
 
-Wat eSports ook zo kenmerkend maakt is dat het vrij nieuw is maar toch al heel veel mensen aantrekt. Het platform bij uitstek om eSports te volgen is ''Twitch.tv'', hiermee kunnen mensen matchen, toernooien maar ook individuelen bekijken die aan het gamen zijn. Op bepaalde momenten kunnen er tot wel enkele miljoenen mensen gelijktijdig kijken naar de grootste competities ter wereld op het vlak van gaming. Gemiddeld zijn er 500.000 mensen aan het kijken naar wat er zoal gespeeld wordt door andere mensen voor een totaal van 241.441.823.059 minuten over het jaar 2015. \citep{twitchinfographic}
+Wat eSports ook zo kenmerkend maakt is dat het vrij nieuw is maar toch al heel veel mensen aantrekt. Het platform bij uitstek om eSports te volgen is ''Twitch.tv'', hiermee kunnen mensen matchen, toernooien maar ook individuen bekijken die aan het gamen zijn. Op bepaalde momenten kunnen er tot wel enkele miljoenen mensen gelijktijdig kijken naar de grootste competities ter wereld op het vlak van gaming. Gemiddeld zijn er 500.000 mensen aan het kijken naar wat er zoal gespeeld wordt door andere mensen voor een totaal van 241.441.823.059 minuten over het jaar 2015. \citep{twitchinfographic}
+\begin{figure}[!h]
+\centering
+\includegraphics[width=15cm]{img/TwitchInfographic}
+\caption{Aantal uren bekeken beelden op Twitch.tv}
+\end{figure}  
 \\
 
-Het genre game waar deze thesis zich op zal specialiseren zijn ''FPS games''. Dit staat voor First Person Shooters of in andere woorden, games waarbij mensen zich in een karakter wagen en kijken vanuit de ogen van deze persoon. De grootste game die momenteel competitief gespeeld wordt in de eSports scene (onder de categorie FPS Games) is de alom bekende Counter-Strike: Global Offensive. 
+Het genre game waar deze thesis zich op zal specialiseren zijn ''FPS games''. Dit staat voor First Person Shooters of met andere woorden, games waarbij mensen zich in een bepaald personage wagen en uit het standpunt van die persoon kijken. De grootste game die momenteel competitief gespeeld wordt in de eSports scene (onder de categorie FPS Games) is de alom bekende Counter-Strike: Global Offensive. 
  Met een 10 miljoen unieke spelers per maand heeft dit spel een heel grote spelersbasis en spelers van overal ter wereld. Dit is een van de meest bekeken games op Twitch en is ook een van de eenvoudigste games om te snappen vergeleken met de andere populaire eSports games. \citep{csgoblog}
 \\
 
-Het nadeel aan deze game is het grote aantal valsspelers of ''cheaters''. Veel spelers zijn snel geneigd om een van de veelvuldige cheats te downloaden en deze even te proberen wanneer ze een minder moment hebben. Het is dan ook helemaal niet moeilijk om deze te vinden na wat zoeken op het internet. Mensen downloaden deze dan even naar hen pc en schakelen deze dan in om voordelen te krijgen op het vlak van ''aim'' - het mikken met een geweer - of op vlak van ''pressence'' - mensen zien terwijl deze zich achter een muur bevinden (ook wel wallhack genoemd). Daarna gaat dit nog veel verder tot zelf de kleinste dingen zoals het rondspringen waardoor je meer snelheid haalt - bunnyhoppen genaamd -, dit is normaal gezien iets wat heel veel oefening bevat en zelf de beste spelers niet consistent kunnen doen. 
+Het nadeel aan deze game is het grote aantal valsspelers of ''cheaters''. Veel spelers zijn snel geneigd om een van de veelvuldige cheats te downloaden en deze even te proberen wanneer ze een minder moment hebben. Het is dan ook helemaal niet moeilijk om deze te vinden na wat zoeken op het internet. Na even zoeken komen we de volgende voorbeelden al tegen:
+
+ Mensen downloaden deze dan even naar hen pc en schakelen deze dan in om voordelen te krijgen op het vlak van ''aim'' - het mikken met een geweer - of op vlak van ''pressence'' - mensen zien terwijl deze zich achter een muur bevinden (ook wel wallhack genoemd). Daarna gaat dit nog veel verder tot zelf de kleinste dingen zoals het rondspringen waardoor je meer snelheid haalt - bunnyhoppen genaamd -, dit is normaal gezien iets wat heel veel oefening bevat en zelf de beste spelers niet consistent kunnen doen. 
 \\
 
 Voor dit onderzoek zal er vooral geconcentreerd worden op het spel Counter-Strike omdat dit het meest gekend is en er dus ook het diepst op ingegaan kan worden. De technieken om vals te spelen en dit tegen te gaan zijn vrij gelijklopend tussen verschillende FPS games zoals Counter-Strike, Battlefield, Call of Duty,... De technieken die hier dan ook toegepast worden zullen parallel lopen voor deze voorgenoemde andere games.
