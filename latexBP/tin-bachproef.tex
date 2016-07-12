@@ -85,17 +85,17 @@
 \newcommand{\promotor}{Jens Buysse}
 
 % De naam van je co-promotor
-\newcommand{\copromotor}{Jasper Dansercoer}
+\newcommand{\copromotor}{Bert Van Vreckem}
 
 % Indien je bachelorproef in opdracht van een bedrijf of organisatie
 % geschreven is, geef je hier de naam.
-\newcommand{\instelling}{BeSports}
+\newcommand{\instelling}{}
 
 % De titel van het rapport/bachelorproef
-\newcommand{\titel}{Anti-Cheating voor FPS games binnen de eSports scene}
+\newcommand{\titel}{Automatische opzet van Cisco netwerkapparatuur in combinatie met Ansible}
 
 % Datum van indienen
-\newcommand{\datum}{29 mei 2016}
+\newcommand{\datum}{26 augustus 2016}
 
 % Faculteit
 \newcommand{\faculteit}{Faculteit Bedrijf en Organisatie}
@@ -110,7 +110,7 @@
 %  - 1e semester = 1e examenperiode
 %  - 2e semester = 2e examenperiode
 %  - tweede zit = 3e examenperiode
-\newcommand{\examenperiode}{Tweede examenperiode}
+\newcommand{\examenperiode}{Derde examenperiode}
 
 %%========================================================================
 %% Inhoud document
@@ -177,30 +177,42 @@
 
 
 \begin{abstract}
-% TODO: De "abstract" of samenvatting is een kernachtige (max 1 blz. voor een
-% thesis) synthese van het document. In ons geval beschrijf je kort de
-% probleemstelling en de context, de onderzoeksvragen, de aanpak en de
-% resultaten.
-Binnen de sector eSports en gaming is cheating een van de grootste opkomende problemen. De gamewereld is een groeiende sector waarbij er meer en meer geld mee valt te verdienen. Er zijn toernooien voor eSports games met prijzenpotten oplopend tot 18 miljoen euro. Dit is vaak ook een van de redenen waardoor er ook vaker wordt valsgespeeld. De spelers kunnen een onfair voordeel halen dat heel miniem kan zijn tot spelbrekend aan de hand van verschillende cheats. De bedoeling is dan ook om dit tegen te gaan en een competitie die gespeeld wordt te controleren op eerlijkheid via ''anti-cheating''. 
+%% TODO: De "abstract" of samenvatting is een kernachtige (~ 1 blz. voor een
+%% thesis) synthese van het document.
+%%
+%% Deze aspecten moeten zeker aan bod komen:
+%% - Context: waarom is dit werk belangrijk?
+%% - Nood: waarom moest dit onderzocht worden?
+%% - Taak: wat heb je precies gedaan?
+%% - Object: wat staat in dit document geschreven?
+%% - Resultaat: wat was het resultaat?
+%% - Conclusie: wat is/zijn de belangrijkste conclusie(s)?
+%% - Perspectief: blijven er nog vragen open die in de toekomst nog kunnen
+%%    onderzocht worden? Wat is een mogelijk vervolg voor jouw onderzoek?
+%%
+%% LET OP! Een samenvatting is GEEN voorwoord!
+
+Internet is tegenwoordig niet meer weg te denken maar om het op te zetten is er vaak toch heel wat werk voor nodig voor een netwerkbeheerder. Zeker bij grotere bedrijven kan het configureren een tijdrovende taak zijn die vaak heel repetitief en gelijkaardig is. De laatste jaren is er veel vooruitgang geboekt bij het automatiseren van servers met behulp van verschillende frameworks en tools. Het volgende onderdeel die aan de beurt is zijn verschillende componenten uit het netwerksegment zoals switches, routers en wifi-controllers. 
 \\
 
-In dit onderzoek gaan we op zoek naar de populairste methodes om vals te spelen: hoe deze werken, wat de verschillen zijn en  een vergelijking van functionaliteit. 
-Daarna nemen we een kijkje naar beste manieren die relatief eenvoudig te implementeren zijn om dit tegen te gaan. Deze zullen getest worden aan de hand van meerdere cheats die er op los gelaten worden.
+Meer specifiek zal er geconcentreerd worden op het automatiseren met de Ansible architectuur. Deze is uitgebreid in de les gezien bij Meneer Van Vreckem en ook in het werkveld kom je dit al maar vaker tegen. Het zou dus interessant zijn om netwerkapparatuur automatisch te kunnen configureren met dezelfde kennis die de systeembeheerders al hebben. 
 \\
 
-Dit zal gedaan worden aan de hand van het zoeken van enkele veelgebruikte cheats. Deze worden dan getest op een server die verschillende methodes van anti-cheating zal implementeren.
-\\
+In het document ga ik even onderzoek doen naar bestaande automatisatie methoden en waarom er voor Ansible gekozen is naast het gezien te hebben in de lessen. Daarna zal er een basis configuratie gemaakt worden met Cisco apparatuur bestaande uit 1 router en 2 switches. Deze wordt getest en de criteria die moeten voldoen worden genoteerd. Hierna wordt een "Playbook" gemaakt in Ansible en wordt deze toegepast op de apparatuur. Deze zal aan de hand van vooropgestelde resultaten vergeleken worden met de nieuwe resultaten behaald met Ansible. 
 
-Als laatste onderdeel interviewen we iemand met diepere vakkennis rond het onderwerp. Dit om nog iets diepere informatie te werking van anti-cheats want het is niet eenvoudig om hier rond informatie te vinden omdat je zo ook valsspelers inzicht heeft in de anti-cheat.
+%% TODO: BESCHRIJVEND VAN RESULTATEN
   
 \end{abstract}
 
 \chapter*{Voorwoord}
 \label{ch:voorwoord}
 
-% TODO: Vergeet ook niet te bedanken wie je geholpen/gesteund/... heeft
+%% TODO:
+%% Het voorwoord is het enige deel van de bachelorproef waar je vanuit je
+%% eigen standpunt (``ik-vorm'') mag schrijven. Je kan hier bv. motiveren
+%% waarom jij het onderwerp wil bespreken.
+%% Vergeet ook niet te bedanken wie je geholpen/gesteund/... heeft
 
-Ik wil BeSports bedanken voor het gebruik van de gameservers om testen op uit te voeren. Ook aan de verschillende communityleden van het platform voor het doorgeven van enkel websites met cheat software. Als laatste wil ik ook nog Stefanie Geldof bedanken om samen testen uit te voeren op de gameservers.
 
 \tableofcontents
 
